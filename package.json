@@ -1,0 +1,22 @@
+{
+  "name": "cc-mongo",
+  "version": "1.0.0",
+  "description": "A simple way to use MongoDB.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iburning/cc-mongo.git"
+  },
+  "keywords": [
+    "mongo"
+  ],
+  "author": "burning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iburning/cc-mongo/issues"
+  },
+  "homepage": "https://github.com/iburning/cc-mongo#readme"
+}

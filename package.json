@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/iburning/cc-mongo/issues"
   },
-  "homepage": "https://github.com/iburning/cc-mongo#readme"
+  "homepage": "https://github.com/iburning/cc-mongo#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "mongodb": "^5.5.0"
+  }
 }

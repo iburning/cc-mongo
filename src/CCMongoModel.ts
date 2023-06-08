@@ -1,6 +1,6 @@
 /**
  * @name CCMongoModel.mjs
- * @date 2023.06.06
+ * @date 2023.06.08
  */
 
 import CCMongo from './CCMongo';
@@ -48,15 +48,18 @@ export default class CCMongoModel {
     };
   }
 
-  async insertOne(data: any) {
+  async insertOne(data: any, options: any) {
     const collection = await this.getCollection();
     const id = await this.getNextId();
-    return await collection.insertOne({
+    const result = await collection.insertOne({
       ...data,
       id,
       createdAt: new Date(),
-    });
-    // return this.assertInsertOneSuccess(result);
+    }, options);
+    return {
+      ...result,
+      id,
+    }
   }
 
   async removeOne(query: any) {

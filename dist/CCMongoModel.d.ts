@@ -11,7 +11,11 @@ export default class CCMongoModel {
         page: number;
         total: number;
     }>;
-    insertOne(data: any): Promise<import("mongodb").InsertOneResult<import("bson").Document>>;
+    insertOne(data: any, options: any): Promise<{
+        id: number;
+        acknowledged: boolean;
+        insertedId: import("bson").ObjectId;
+    }>;
     removeOne(query: any): Promise<import("mongodb").DeleteResult>;
     updateOne(filter: any, update: any, options: any): Promise<import("mongodb").UpdateResult<import("bson").Document>>;
     getCollection(): Promise<import("mongodb").Collection<import("bson").Document>>;

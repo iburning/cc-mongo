@@ -50,11 +50,12 @@ class CCMongoModel {
             };
         });
     }
-    insertOne(data) {
+    insertOne(data, options) {
         return __awaiter(this, void 0, void 0, function* () {
             const collection = yield this.getCollection();
             const id = yield this.getNextId();
-            return yield collection.insertOne(Object.assign(Object.assign({}, data), { id, createdAt: new Date() }));
+            const result = yield collection.insertOne(Object.assign(Object.assign({}, data), { id, createdAt: new Date() }), options);
+            return Object.assign(Object.assign({}, result), { id });
         });
     }
     removeOne(query) {
